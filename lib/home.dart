@@ -8,77 +8,99 @@ class Homescreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFCDB8F9),
       body: CustomPaint(
-        painter: MyShape(),
-        child: Container(
-         margin: EdgeInsets.all(100.0),
-          decoration: BoxDecoration(
-            // color: Colors.orange,
-            shape: BoxShape.circle,
-              gradient:  LinearGradient(
-                    colors: [ Color(0xFFBD9D9D9).withOpacity(1),
-                     Color(0xFFBD9D9D9).withOpacity(0.3),
-                    ],
+        painter: CurvePainter(),
+        child: Stack(
+          children: [
+            Positioned(
+              top: 78,
+              left: -25,
+              child: Container(
+                width: 138,
+                height: 138,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xFFD9D9D9),
+                ),
+              ),
+            ),
+            const Positioned(
+                top: 173,
+                left: 105,
+                child: Text(
+                  '"Looking For Fun"',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
                   ),
-            
-          ),
-      ),
+                )),
+
+            Positioned(
+              top: 67,
+              right: 24,
+              child: TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  side: const BorderSide (width:97,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(34),
+                  ),
+                  foregroundColor: Color(0xFFB8E85A0),
+                  backgroundColor: Color(0xFFB8E85A0),
+                   fixedSize: const Size(94,44),
+                ),
+                child: const Text(
+                  'skip',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white
+                  ),
+                ),
+              ),
+            ),
+             Positioned(
+              top: 319,
+              left: 48,
+              right: 60,
+              bottom:60 ,
+              // right: 48,
+              child:(
+                Image.asset(
+              'assets/img1.png',
+              width: 320,
+              height: 542,
+              // fit: BoxFit.cover,
+            )
+
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-class MyShape extends CustomPainter {
+class CurvePainter extends CustomPainter {
   @override
-  // void paint(Canvas canvas, Size size) {
-  //   // TODO: implement paint
-  // }
-
   void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
-    final paint = Paint();
-    final path = Path();
-    // paint.color = Colors.lightGreen;
-    // paint.style = PaintingStyle.stroke;
-    paint.strokeWidth = 5;
-    path.moveTo(0, size.height * 0.0);
-    path.quadraticBezierTo(
-      size.width * 0.1,
-      size.height * 0.0,
-      size.width * 0.3,
-      size.height * 0.0,
-    );
-    path.quadraticBezierTo(
-      size.width * 0.45,
-      size.height * 0.0,
-      size.width * 0.5,
-      size.height * 0.0,
-    );
-    // path.quadraticBezierTo(
-    //   size.width * 0.95,
-    //   size.height * 0.78,
-    //   size.width * 0.7,
-    //   size.height * 0.5,
-    // );
-    path.quadraticBezierTo(
-      size.width * 0.95,
-      size.height * 0.78,
-      size.width,
-      size.height * 0.9,
-    );
-    path.lineTo(size.width, size.height);
+    var paint = Paint();
+    paint.color = const Color(0xFFAA81F7);
+    paint.style = PaintingStyle.fill; // Change this to fill
+
+    var path = Path();
+
     path.lineTo(0, size.height);
-    path.lineTo(0, size.height * 0.8);
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width, (size.height * 7) / 8);
+    path.lineTo(size.width / 2, 0);
+    path.lineTo(0, 0);
 
     canvas.drawPath(path, paint);
-    final paint1 = Paint();
-    paint1.color = const Color(0xFFBAA81F7);
-    paint1.style = PaintingStyle.fill;
-    canvas.drawPath(path, paint1);
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
+  bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
   }
 }
