@@ -11,6 +11,7 @@ class Homescreen extends StatelessWidget {
         painter: CurvePainter(),
         child: Stack(
           children: [
+            // circle
             Positioned(
               top: 78,
               left: -25,
@@ -19,60 +20,120 @@ class Homescreen extends StatelessWidget {
                 height: 138,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFD9D9D9),
+            
+                  gradient: LinearGradient(
+                    colors: [
+                      const Color(0xFFD9D9D9),
+                      const Color(0xFFD9D9D9),
+                    ],
+                  ),
                 ),
               ),
             ),
+            // above coma
+            //    Positioned(
+            //   top: 178.1,
+            //   left: 85.17,
+            //   // right: 60,
+            //   // bottom:60 ,
+            //   // right: 48,
+            //   child: (Image.asset(
+            //     'assets/img4.png',
+            //     width: 219,
+            //     // height: 597,
+            //     // fit: BoxFit.cover,
+            //   )),
+            // ),
+              
             const Positioned(
                 top: 173,
                 left: 105,
                 child: Text(
-                  '"Looking For Fun"',
+                  'Looking For Fun',
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
                   ),
                 )),
-
+                // under line
+            Positioned(
+              top: 223,
+              left: 104,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img3.png',
+                width: 219,
+                // height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            // under coma
+            //   Positioned(
+            //   top: 220,
+            //   left: 344,
+            //   // right: 60,
+            //   // bottom:60 ,
+            //   // right: 48,
+            //   child: (Image.asset(
+            //     'assets/img5.png',
+            //     width: 219,
+            //     // height: 597,
+            //     // fit: BoxFit.cover,
+            //   )),
+            // ),
+            // button
             Positioned(
               top: 67,
               right: 24,
               child: TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
-                  side: const BorderSide (width:97,),
+                  side: const BorderSide(
+                    width: 97,
+                  ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(34),
                   ),
                   foregroundColor: Color(0xFFB8E85A0),
                   backgroundColor: Color(0xFFB8E85A0),
-                   fixedSize: const Size(94,44),
+                  fixedSize: const Size(94, 44),
                 ),
                 child: const Text(
                   'skip',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white
-                  ),
+                  style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),
             ),
-             Positioned(
+            // background square
+            Positioned(
+              top: 269,
+              left: 43,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img2.png',
+                width: 331,
+                height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            // girl image
+            Positioned(
               top: 319,
               left: 48,
               right: 60,
-              bottom:60 ,
+              bottom: 60,
               // right: 48,
-              child:(
-                Image.asset(
-              'assets/img1.png',
-              width: 320,
-              height: 542,
-              // fit: BoxFit.cover,
-            )
-
-              ),
+              child: (Image.asset(
+                'assets/img1.png',
+                width: 320,
+                height: 542,
+                // fit: BoxFit.cover,
+              )),
             ),
           ],
         ),
