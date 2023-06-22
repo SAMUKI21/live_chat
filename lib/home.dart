@@ -18,33 +18,33 @@ class Homescreen extends StatelessWidget {
               child: Container(
                 width: 138,
                 height: 138,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
-            
                   gradient: LinearGradient(
                     colors: [
-                      const Color(0xFFD9D9D9),
-                      const Color(0xFFD9D9D9),
+                      const Color(0xFFD9D9D9).withOpacity(0.7),
+                      const Color(0xFFD9D9D9).withOpacity(0.001),
                     ],
                   ),
                 ),
               ),
             ),
             // above coma
-            //    Positioned(
-            //   top: 178.1,
-            //   left: 85.17,
-            //   // right: 60,
-            //   // bottom:60 ,
-            //   // right: 48,
-            //   child: (Image.asset(
-            //     'assets/img4.png',
-            //     width: 219,
-            //     // height: 597,
-            //     // fit: BoxFit.cover,
-            //   )),
-            // ),
-              
+            Positioned(
+              top: 178.1,
+              left: 85.17,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img4.png',
+                width: 40,
+                height: 40,
+                // height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+
             const Positioned(
                 top: 173,
                 left: 105,
@@ -56,7 +56,7 @@ class Homescreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 )),
-                // under line
+            // under line
             Positioned(
               top: 223,
               left: 104,
@@ -65,26 +65,26 @@ class Homescreen extends StatelessWidget {
               // right: 48,
               child: (Image.asset(
                 'assets/img3.png',
+                width: 50,
+                // height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            //  under coma
+            Positioned(
+              top: 220,
+              left: 344,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img5.png',
                 width: 219,
                 // height: 597,
                 // fit: BoxFit.cover,
               )),
             ),
-            // under coma
-            //   Positioned(
-            //   top: 220,
-            //   left: 344,
-            //   // right: 60,
-            //   // bottom:60 ,
-            //   // right: 48,
-            //   child: (Image.asset(
-            //     'assets/img5.png',
-            //     width: 219,
-            //     // height: 597,
-            //     // fit: BoxFit.cover,
-            //   )),
-            // ),
-            // button
+            //  button
             Positioned(
               top: 67,
               right: 24,
@@ -92,14 +92,14 @@ class Homescreen extends StatelessWidget {
                 onPressed: () {},
                 style: TextButton.styleFrom(
                   side: const BorderSide(
-                    width: 97,
+                   // width: 97,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(34),
                   ),
-                  foregroundColor: Color(0xFFB8E85A0),
-                  backgroundColor: Color(0xFFB8E85A0),
-                  fixedSize: const Size(94, 44),
+                  // foregroundColor: Color(0xFFB8E85A0),
+                  //  backgroundColor: Color(0xFFB8E85A0),
+                 // fixedSize: const Size(94, 44),
                 ),
                 child: const Text(
                   'skip',
@@ -107,20 +107,20 @@ class Homescreen extends StatelessWidget {
                 ),
               ),
             ),
-            // background square
-            Positioned(
-              top: 269,
-              left: 43,
-              // right: 60,
-              // bottom:60 ,
-              // right: 48,
-              child: (Image.asset(
-                'assets/img2.png',
-                width: 331,
-                height: 597,
-                // fit: BoxFit.cover,
-              )),
-            ),
+            // // background square
+              Positioned(
+                top: 269,
+                left: 43,
+                // right: 60,
+                // bottom:60 ,
+                // right: 48,
+                child: (Image.asset(
+                  'assets/img2.png',
+                  width: 331,
+                  height: 597,
+                  // fit: BoxFit.cover,
+                )),
+              ),
             // girl image
             Positioned(
               top: 319,
