@@ -1,0 +1,200 @@
+import 'package:flutter/material.dart';
+
+class Homescreenone extends StatelessWidget {
+  const Homescreenone({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFCDB8F9),
+      body: CustomPaint(
+        painter: CurvePainter(),
+        child: Stack(
+          children: [
+            // circle
+            Positioned(
+              top: 191.41,
+              left: -33,
+              child: Container(
+                width: 138,
+                height: 138,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: LinearGradient(
+                    colors: [
+                      const Color(0xFFD9D9D9).withOpacity(0.7),
+                      const Color(0xFFD9D9D9).withOpacity(0.001),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            // above coma
+            Positioned(
+              top: 118,
+              left: 61,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img4.png',
+                width: 8.81,
+                height: 23.04,
+                // height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+             // above coma 2
+            Positioned(
+              top: 118.1,
+              left: 75,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img4.png',
+                width: 8.81,
+                height: 23.04,
+                // height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            //    Positioned(
+            //   top: 178.1,
+            //   left: 85.17,
+            //   // right: 60,
+            //   // bottom:60 ,
+            //   // right: 48,
+            //   child: (Image.asset(
+            //     'assets/img4.png',
+            //     width: 20,
+            //     height: 20,
+            //     // height: 597,
+            //     // fit: BoxFit.cover,
+            //   )),
+            // ),
+
+
+            const Positioned(
+                top: 112,
+                left: 83,
+                child: Text(
+                  'Instat video chat',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
+                )),
+            // under line
+            Positioned(
+              top: 165.5,
+              left:82,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img3.png',
+                width: 219,
+               
+                // fit: BoxFit.cover,
+              )
+              ),
+            ),
+            //  under coma
+            Positioned(
+              top: 163.15,
+              left: 351,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img5.png',
+                width: 8.81,
+                height:23.04,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            // under coma 2
+                Positioned(
+              top: 163,
+              left: 365,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img5.png',
+                width: 8.81,
+                height:23.04,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            
+            //  button
+            Positioned(
+              top: 67,
+              right: 24,
+              child: TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  side: const BorderSide(
+                   // width: 97,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(34),
+                  ),
+                  // foregroundColor: Color(0xFFB8E85A0),
+                  //  backgroundColor: Color(0xFFB8E85A0),
+                 // fixedSize: const Size(94, 44),
+                ),
+                child: const Text(
+                  'skip',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+            ),
+            // // background square
+              Positioned(
+                top: 186,
+                left: 53,
+                // right: 60,
+                // bottom:60 ,
+                // right: 48,
+                child: (Image.asset(
+                  'assets/All.png',
+                  width: 322.52,
+                  height:697.8,
+                  // fit: BoxFit.cover,
+                )),
+              ),
+           
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CurvePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    var paint = Paint();
+    paint.color = const Color(0xFFAA81F7);
+    paint.style = PaintingStyle.fill; // Change this to fill
+
+    var path = Path();
+
+    path.lineTo(0, size.height);
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width, (size.height * 7) / 8);
+    path.lineTo(size.width / 2, 0);
+    path.lineTo(0, 0);
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
+  }
+}

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:live_chat/home2.dart';
 
-import 'home.dart';
+// import 'home.dart';
+// import 'home1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Homescreen(),
+      // home: const Homescreen()
+      // home: const Homescreenone (),
+      home: const Homescreentwo (),
     );
   }
 }
