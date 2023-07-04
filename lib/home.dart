@@ -38,12 +38,42 @@ class Homescreen extends StatelessWidget {
               // right: 48,
               child: (Image.asset(
                 'assets/img4.png',
-                width: 40,
-                height: 40,
+                width: 8.81,
+                height: 23.04,
                 // height: 597,
                 // fit: BoxFit.cover,
               )),
             ),
+             // above coma 2
+            Positioned(
+              top: 178.12,
+              left: 99.15,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img4.png',
+                width: 8.81,
+                height: 23.04,
+                // height: 597,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            //    Positioned(
+            //   top: 178.1,
+            //   left: 85.17,
+            //   // right: 60,
+            //   // bottom:60 ,
+            //   // right: 48,
+            //   child: (Image.asset(
+            //     'assets/img4.png',
+            //     width: 20,
+            //     height: 20,
+            //     // height: 597,
+            //     // fit: BoxFit.cover,
+            //   )),
+            // ),
+
 
             const Positioned(
                 top: 173,
@@ -65,13 +95,28 @@ class Homescreen extends StatelessWidget {
               // right: 48,
               child: (Image.asset(
                 'assets/img3.png',
-                width: 50,
-                // height: 597,
+                width: 219,
+               
                 // fit: BoxFit.cover,
-              )),
+              )
+              ),
             ),
             //  under coma
             Positioned(
+              top: 220.15,
+              left: 330,
+              // right: 60,
+              // bottom:60 ,
+              // right: 48,
+              child: (Image.asset(
+                'assets/img5.png',
+                width: 8.81,
+                height:23.04,
+                // fit: BoxFit.cover,
+              )),
+            ),
+            // under coma 2
+                Positioned(
               top: 220,
               left: 344,
               // right: 60,
@@ -79,11 +124,12 @@ class Homescreen extends StatelessWidget {
               // right: 48,
               child: (Image.asset(
                 'assets/img5.png',
-                width: 219,
-                // height: 597,
+                width: 8.81,
+                height:23.04,
                 // fit: BoxFit.cover,
               )),
             ),
+            
             //  button
             Positioned(
               top: 67,
