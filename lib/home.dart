@@ -140,9 +140,6 @@ class Homescreen extends StatelessWidget {
                   side: const BorderSide(
                    // width: 97,
                   ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(34),
-                  ),
                   // foregroundColor: Color(0xFFB8E85A0),
                   //  backgroundColor: Color(0xFFB8E85A0),
                  // fixedSize: const Size(94, 44),
